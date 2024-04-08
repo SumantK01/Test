@@ -12,7 +12,7 @@ data = load_data("Survey.xlsx")
 
 # Landing Page
 def landing_page():
-    st.image('your_image_path.jpg', use_column_width=True)
+    st.image('building.jpg', use_column_width=True)
     st.title('Tile Adhesive Solution')
     st.write('Welcome to Tile Adhesive Solution!')
     st.write('This web application helps you check the availability of materials from different brands and areas.')
