@@ -31,6 +31,11 @@ def landing_page():
 
 # Main function to build the web app
 def main():
+    # Display landing page only if URL is opened
+    if st.experimental_get_query_params():
+        landing_page()
+        return
+    
     # Sidebar
     st.sidebar.title('Features')
     feature_select = st.sidebar.selectbox('Select Feature', ['Shop Name', 'Brand Name', 'Pin Code', 'Prediction Model'])
@@ -103,5 +108,4 @@ def main():
                 st.write('Estimated Area of Sq Meters it will cover:', int(round(30 * Value_Estimate/7.5)))
 
 if __name__ == '__main__':
-    landing_page()
     main()
